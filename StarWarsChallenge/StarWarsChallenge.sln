@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsChallenge.Server", "StarWarsChallenge.Server\StarWarsChallenge.Server.csproj", "{3870C16E-7FB4-4136-AD56-85DE638E020B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsChallenge.Server", "StarWarsChallenge.Server\StarWarsChallenge.Server.csproj", "{3870C16E-7FB4-4136-AD56-85DE638E020B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsChallenge.Client", "StarWarsChallenge.Client\StarWarsChallenge.Client.csproj", "{EDA83D3E-0342-4F50-BB1D-1F2DB8A5A7F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsChallenge.Service", "StarWarsChallenge.Service\StarWarsChallenge.Service.csproj", "{00CBAF2F-3F32-4332-A8E0-49F25F0FA1A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsChallenge.Service", "StarWarsChallenge.Service\StarWarsChallenge.Service.csproj", "{00CBAF2F-3F32-4332-A8E0-49F25F0FA1A4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWarsChallenge.Data", "StarWarsChallenge.Data\StarWarsChallenge.Data.csproj", "{756E9401-2F42-47E5-A0AE-39F1D1A168A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWarsChallenge.Data", "StarWarsChallenge.Data\StarWarsChallenge.Data.csproj", "{756E9401-2F42-47E5-A0AE-39F1D1A168A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{3870C16E-7FB4-4136-AD56-85DE638E020B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3870C16E-7FB4-4136-AD56-85DE638E020B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3870C16E-7FB4-4136-AD56-85DE638E020B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EDA83D3E-0342-4F50-BB1D-1F2DB8A5A7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDA83D3E-0342-4F50-BB1D-1F2DB8A5A7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDA83D3E-0342-4F50-BB1D-1F2DB8A5A7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDA83D3E-0342-4F50-BB1D-1F2DB8A5A7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00CBAF2F-3F32-4332-A8E0-49F25F0FA1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{00CBAF2F-3F32-4332-A8E0-49F25F0FA1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00CBAF2F-3F32-4332-A8E0-49F25F0FA1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU

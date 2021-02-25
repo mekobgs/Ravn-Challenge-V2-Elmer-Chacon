@@ -8,19 +8,19 @@ namespace StarWarsChallenge.Service.Response
     {
         public PersonResponse()
         { }
-        public PersonResponse(Person personInfo, Planet homeworld, List<Species> species, List<string> films, List<Vehicle> vehicles, List<string> starships)
+        public PersonResponse(Person person, Planet homeworld, List<Species> species, List<string> films, List<Vehicle> vehicles, List<string> starships)
         {
-            Name = personInfo.Name;
-            Height = personInfo.Height;
-            Mass = personInfo.Mass;
-            Hair_color = personInfo.Hair_color;
-            Skin_color = personInfo.Skin_color;
-            Eye_color = personInfo.Eye_color;
-            Birth_year = personInfo.Birth_year;
-            Gender = personInfo.Gender;
-            Created = personInfo.Created;
-            Edited = personInfo.Edited;
-            Url = personInfo.Url;
+            Name = person.Name;
+            Height = person.Height;
+            Mass = person.Mass;
+            Hair_color = person.Hair_color;
+            Skin_color = person.Skin_color;
+            Eye_color = person.Eye_color;
+            Birth_year = person.Birth_year;
+            Gender = person.Gender;
+            Created = person.Created;
+            Edited = person.Edited;
+            Url = person.Url;
             Films = films;
             Species = species;
             Vehicles = vehicles;
