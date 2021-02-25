@@ -5,19 +5,19 @@ namespace StarWarsChallenge.Data.Models
 {
     public class Planet
     {
-        public string name { get; set; }
-        public string rotation_period { get; set; }
-        public string orbital_period { get; set; }
-        public string diameter { get; set; }
-        public string climate { get; set; }
-        public string gravity { get; set; }
-        public string terrain { get; set; }
-        public string surface_water { get; set; }
-        public string population { get; set; }
-        public List<string> residents { get; set; }
-        public List<string> films { get; set; }
-        public DateTime created { get; set; }
-        public DateTime edited { get; set; }
-        public string url { get; set; }
+        public string Name { get; set; }
+        public string Rotation_period { get; set; }
+        public string Orbital_period { get; set; }
+        public string Diameter { get; set; }
+        public string Climate { get; set; }
+        public string Gravity { get; set; }
+        public string Terrain { get; set; }
+        public string Surface_water { get; set; }
+        public string Population { get; set; }
+        public List<string> Residents { get; set; }
+        public List<string> Films { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Edited { get; set; }
+        public string Url { get; set; }
     }
 }

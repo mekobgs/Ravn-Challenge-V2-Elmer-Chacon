@@ -5,20 +5,20 @@ namespace StarWarsChallenge.Data.Models
 {
     public class Species
     {
-        public string name { get; set; }
-        public string classification { get; set; }
-        public string designation { get; set; }
-        public string average_height { get; set; }
-        public string skin_colors { get; set; }
-        public string hair_colors { get; set; }
-        public string eye_colors { get; set; }
-        public string average_lifespan { get; set; }
-        public string homeworld { get; set; }
-        public string language { get; set; }
-        public List<string> people { get; set; }
-        public List<string> films { get; set; }
-        public DateTime created { get; set; }
-        public DateTime edited { get; set; }
-        public string url { get; set; }
+        public string Name { get; set; }
+        public string Classification { get; set; }
+        public string Designation { get; set; }
+        public string Average_height { get; set; }
+        public string Skin_colors { get; set; }
+        public string Hair_colors { get; set; }
+        public string Eye_colors { get; set; }
+        public string Average_lifespan { get; set; }
+        public string Homeworld { get; set; }
+        public string Language { get; set; }
+        public List<string> People { get; set; }
+        public List<string> Films { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Edited { get; set; }
+        public string Url { get; set; }
     }
 }
