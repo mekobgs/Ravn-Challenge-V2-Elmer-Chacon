@@ -1,0 +1,81 @@
+﻿@page "/StarWars"
+@using StarWarsChallenge.Service.Response
+@using StarWarsChallenge.Service.Service
+@inject HttpService baseAddress;
+@inject HttpClient Http;
+
+<div class="d-flex">
+
+    <div class="people-list">
+        @if (people != null)
+        {
+@foreach (var item in people)
+{
+<PersonCell Person="item" OnClickCallback="@(() => selectPerson(item))"></PersonCell>}}
+
+        @if (isLoading)
+        {
+<Loading></Loading>}
+        @if (!isLoading && (people == null || people.Count == 0))
+        {
+<div class="error-cell">
+    <div class="h2 high-emphasis">Failed to Load Data</div>
+</div>}
+    </div>
+    <div class="person-detail flex-grow-1">
+        @if (selectedPerson != null)
+        {
+<PersonDetail Person="selectedPerson"></PersonDetail>}
+    </div>
+</div>
+
+
+@code { private List<PersonResponse> people = new List<PersonResponse>();
+
+    private PersonResponse selectedPerson;
+
+    private int currentPage = 1;
+
+    private bool isLoading;
+
+    private string error;
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        GetData();
+    }
+
+    async void GetData()
+    {
+        isLoading = true;
+        StateHasChanged();
+        PersonResponse[] response;
+        try
+        {
+
+            do
+            {
+                response = await Http.GetFromJsonAsync<PersonResponse[]>($"{baseAddress.HttpClient.BaseAddress}api/starwars?page={currentPage}");
+                if (response.Length > 0)
+                {
+
+                    people.AddRange(response);
+                    currentPage++;
+                    StateHasChanged();
+                }
+            } while (response.Length > 0);
+        }
+        catch (Exception err)
+        {
+            error = err.Message;
+        }
+        isLoading = false;
+        StateHasChanged();
+    }
+
+    private void selectPerson(PersonResponse person)
+    {
+        selectedPerson = person;
+    } }

@@ -1,0 +1,32 @@
+﻿@using StarWarsChallenge.Service.Response;
+<div class="person-cell" @onclick="OnClickCallback">
+
+    <div class="person-cell__content">
+        <div class="person-cell__info">
+
+            <div class="h2">
+                @Person.Name
+
+            </div>
+            <div class="low-emphasis">
+                @JoinSpecies() from  @Person.Homeworld.Name
+            </div>
+        </div>
+        <div class="person-cell__arrow">
+            <span class="arrow-icon"></span>
+        </div>
+    </div>
+    <div class="person-cell__bottom-border"></div>
+</div>
+
+@code { 
+    [Parameter]
+    public PersonResponse Person { get; set; }
+
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallback { get; set; }
+
+    protected string JoinSpecies()
+    {
+        return String.Join(" , ", Person.Species.Select(s => s.Name));
+    } }
