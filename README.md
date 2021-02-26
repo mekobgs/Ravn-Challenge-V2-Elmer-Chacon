@@ -5,7 +5,7 @@
 * Blazor Server
 
 ### Project Description ###
-Sample project consuming GraphQL API from Starwars: https://swapi.dev/api/
+Sample project consuming GraphQL API for Starwars characters: https://swapi.dev/api/
 
 ### How it works? ###
 Start VisualStudio and run the solution! (Just Kidding, well no) After that you will see tha main page, left side a list of characters from starwars movies. 
