@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/StarWars"
 @using StarWarsChallenge.Service.Response
 @using StarWarsChallenge.Service.Service
 @inject HttpService baseAddress;
@@ -11,7 +11,7 @@
         {
 @foreach (var item in people)
 {
-<PersonCell person="item" OnClickCallback="@(() => selectPerson(item))"></PersonCell>}}
+<PersonCell Person="item" OnClickCallback="@(() => selectPerson(item))"></PersonCell>}}
 
         @if (isLoading)
         {
@@ -25,7 +25,7 @@
     <div class="person-detail flex-grow-1">
         @if (selectedPerson != null)
         {
-<PersonDetail person="selectedPerson"></PersonDetail>}
+<PersonDetail Person="selectedPerson"></PersonDetail>}
     </div>
 </div>
 
@@ -41,7 +41,13 @@
     private string error;
 
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        GetData();
+    }
+
+    async void GetData()
     {
         isLoading = true;
         StateHasChanged();
