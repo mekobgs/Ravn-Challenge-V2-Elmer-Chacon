@@ -28,3 +28,5 @@ If you like it, you should hire me :D
 Thanks! 
 
 Elmer Chacón - elmerster@gmail.com
+
+Nota: Ya me contrataron yeiih
